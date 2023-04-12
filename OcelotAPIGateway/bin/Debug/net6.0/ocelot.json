@@ -1,0 +1,94 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7103"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/Order",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Order",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7270
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Order/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "DownstreamPathTemplate": "/api/Order/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7270
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Order",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "DownstreamPathTemplate": "/api/Order",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7270
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/User",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7045
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/User/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "DownstreamPathTemplate": "/api/User/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7045
+        }
+      ]
+
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/User",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7045
+        }
+      ]
+    }
+
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
